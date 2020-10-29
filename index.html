@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title lang="ru">КРЕСТИКИ-НОЛИКИ</title>
+	<meta charset="utf-8">
+	<link media="screen" rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="overlay"></div>
+	<header>
+		<div>
+			<p>
+				<span id="gameTitle">КРЕСТИКИ-НОЛИКИ</span>
+			</p>
+		</div>
+	</header>
+	<div>
+		<table id="scoreTable">
+			<tr>
+				<td><p id="scoreP"></p></td>
+			</tr>
+		</table>
+	</div>
+	<div id="tttDiv">
+	
+	</div>
+	<div>
+		<table id="turnTable">
+			<tr>
+				<td>
+					<p id="turnP"></p>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div>
+		<table id="chooseTable">
+			<tr>
+				<td id="stone" onclick="playerChoose(1)" ><img src="img/stone.png"></td>
+				<td id="scissors"  onclick="playerChoose(2)"><img src="img/scissors.png"></td>
+				<td id="paper"  onclick="playerChoose(3)"><img src="img/paper.png"></td>
+			</tr>
+		</table>
+	</div>
+	<div>
+		<table id="rules">
+			<tr>
+				<td>
+					<p >
+						<span >Определимся, кто ходит первый! <br><br>
+						Сыграем в "камень - ножницы - бумага"! <br><br>
+						Нажми на камень, ножницы или бумагу, чтобы сделать свой ход!<br><br>		
+						Победитель определяется по следующим правилам:<br><br>
+						Бумага побеждает камень («бумага обёртывает камень»).<br>
+						Камень побеждает ножницы («камень затупляет или ломает ножницы»).<br>
+						Ножницы побеждают бумагу («ножницы разрезают бумагу»).<br></span>
+					</p>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div>
+		<table id="chooseResult">
+			<tr>
+				<td class="chooseResultTd1">
+					<img src="img/stone.png" id="plChoose1">
+					<img src="img/scissors.png" id="plChoose2">
+					<img src="img/paper.png" id="plChoose3">
+				</td>
+				<td class="chooseResultTd1">
+					<img src="img/stone.png" id="aiChoose1">
+					<img src="img/scissors.png" id="aiChoose2">
+					<img src="img/paper.png" id="aiChoose3">
+				</td>
+			</tr>
+			<tr>
+				<td class="chooseResultTd2">
+					<p class="chooseSign">Ваш результат</p>
+				</td>
+				<td class="chooseResultTd2">
+					<p class="chooseSign">Результат компьютера</p>
+				</td>
+			</tr>
+			<tr><td class="chooseResultTd2" colspan="2">
+				<p id="chooseSign"></p>
+			</td>
+			</tr>
+		</table>
+	</div>
+	<div>
+		<p id="buttonNewP">
+			<span class="buttonSpan" onclick="gameReset()">Начать новую игру</span>
+		</p>
+	</div>
+	<div>
+		<p id="buttonP">
+			<span class="buttonSpan" onclick="gameStart()">Начать игру</span>
+		</p>
+	</div>
+	<script type="text/javascript" src="js/engine.js"></script>
+</body>
+</html>
